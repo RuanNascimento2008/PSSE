@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - BARBEARIA ZÉ DA RÉGUA ✂️</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Efeitos de fundo -->
+    <div class="bg-effects">
+        <div class="particles" id="particles-js"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>BARBEARIA <span class="accent">ZÉ</span> DA RÉGUA</h1>
+                <div class="logo-icon">✂️</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="servicos.html" class="nav-link"><i class="fas fa-concierge-bell"></i> Serviços</a></li>
+                    <li><a href="barbeiros.html" class="nav-link"><i class="fas fa-user"></i> Barbeiros</a></li>
+                    <li><a href="agendamento.html" class="nav-link active"><i class="fas fa-calendar-check"></i> Agendamento</a></li>
+                    <li><a href="contato.html" class="nav-link"><i class="fas fa-phone"></i> Contato</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="booking-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">AGENDE SEU <span class="accent">HORÁRIO</span></h1>
+            <p class="hero-description">Reserve seu horário de forma rápida e prática. Escolha o serviço, o barbeiro e o melhor horário para você.</p>
+        </div>
+    </section>
+
+    <section class="booking-container">
+        <div class="booking-steps">
+            <div class="step active">
+                <div class="step-number">1</div>
+                <div class="step-text">Serviço</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-text">Barbeiro</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-text">Data & Hora</div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-text">Confirmação</div>
+            </div>
+        </div>
+
+        <form id="booking-form" class="glass-card">
+            <!-- PASSO 1: SERVIÇOS (TODOS OS SERVIÇOS) -->
+            <div class="form-step active" id="step-1">
+                <h2>Selecione o Serviço</h2>
+                <p class="step-subtitle">Escolha abaixo o serviço desejado e aproveite nosso cashback especial!</p>
+                
+                <div class="service-categories">
+                    <!-- Corte de Cabelo -->
+                    <div class="service-category">
+                        <h3><i class="fas fa-cut"></i> CORTE DE CABELO</h3>
+                        <div class="service-options-grid">
+                            <div class="service-option-card" data-service="Corte Clássico" data-price="40" data-cashback="5">
+                                <div class="service-card-header">
+                                    <div class="service-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="service-check">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <h3>Corte Clássico</h3>
+                                <p>Corte tradicional com tesoura e máquina</p>
+                                <div class="service-price-tag">
+                                    <span class="price">R$ 40,00</span>
+                                    <span class="cashback">+5% cashback</span>
+                                </div>
+                            </div>
+                            
+                            <div class="service-option-card" data-service="Corte Degradê" data-price="50" data-cashback="5">
+                                <div class="service-card-header">
+                                    <div class="service-icon">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                    <div class="service-check">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <h3>Corte Degradê</h3>
+                                <p>Corte moderno com transição de comprimento</p>
+                                <div class="service-price-tag">
+                                    <span class="price">R$ 50,00</span>
+                                    <span class="cashback">+5% cashback</span>
+                                </div>
+                            </div>
+                            
+                            <div class="service-option-card" data-service="Corte Social" data-price="60" data-cashback="7">
+                                <div class="service-card-header">
+                                    <div class="service-icon">
+                                        <i class="fas fa-gem"></i>
+                                    </div>
+                                    <div class="service-check">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <h3>Corte Social</h3>
+                                <p>Corte profissional para ocasiões especiais</p>
+                                <div class="service-price-tag">
+                                    <span class="price">R$ 60,00</span>
+                                    <span class="cashback">+7% cashback</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Barba -->
+                    <div class="service-category">
+                        <h3><i class="fas fa-bold"></i> BARBA</h3>
+                        <div class="service-options-grid">
+                            <div class="service-option-card" data-service="Barba Completa" data-price="35" data-cashback="5">
+                                <div class="service-card-header">
+                                    <div class="service-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="service-check">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <h3>Barba Completa</h3>
+                                <p>Aparar, modelar e finalizar com toalha quente</p>
+                                <div class="service-price-tag">
+                                    <span class="price">R$ 35,00</span>
+                                    <span class="cashback">+5% cashback</span>
+                                </div>
+                            </div>
+                            
+                            <div class="service-option-card" data-service="Barba Desenhada" data-price="45" data-cashback="7">
+                                <div class="service-card-header">
+                                    <div class="service-icon">
+                                        <i class="fas fa-pen-fancy"></i>
+                                    </div>
+                                    <div class="service-check">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <h3>Barba Desenhada</h3>
+                                <p>Design personalizado para formato do rosto</p>
+                                <div class="service-price-tag">
+                                    <span class="price">R$ 45,00</span>
+                                    <span class="cashback">+7% cashback</span>
+                                </div>
+                            </div>
+                            
+                            <div class="service-option-card" data-service="Hidratação de Barba" data-price="25" data-cashback="5">
+                                <div class="service-card-header">
+                                    <div class="service-icon">
+                                        <i class="fas fa-spa"></i>
+                                    </div>
+                                    <div class="service-check">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <h3>Hidratação de Barba</h3>
+                                <p>Tratamento para barba mais macia e saudável</p>
+                                <div class="service-price-tag">
+                                    <span class="price">R$ 25,00</span>
+                                    <span class="cashback">+5% cashback</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tratamentos Premium -->
+                    <div class="service-category">
+                        <h3><i class="fas fa-crown"></i> TRATAMENTOS PREMIUM</h3>
+                        <div class="service-options-grid">
+                            <div class="service-option-card" data-service="Limpeza de Pele" data-price="50" data-cashback="7">
+                                <div class="service-card-header">
+                                    <div class="service-icon">
+                                        <i class="fas fa-pump-soap"></i>
+                                    </div>
+                                    <div class="service-check">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <h3>Limpeza de Pele</h3>
+                                <p>Limpeza profunda facial para remover impurezas</p>
+                                <div class="service-price-tag">
+                                    <span class="price">R$ 50,00</span>
+                                    <span class="cashback">+7% cashback</span>
+                                </div>
+                            </div>
+                            
+                            <div class="service-option-card" data-service="Massagem Relaxante" data-price="40" data-cashback="5">
+                                <div class="service-card-header">
+                                    <div class="service-icon">
+                                        <i class="fas fa-hand-holding-heart"></i>
+                                    </div>
+                                    <div class="service-check">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <h3>Massagem Relaxante</h3>
+                                <p>Massagem facial para aliviar tensões e estresse</p>
+                                <div class="service-price-tag">
+                                    <span class="price">R$ 40,00</span>
+                                    <span class="cashback">+5% cashback</span>
+                                </div>
+                            </div>
+                            
+                            <div class="service-option-card" data-service="Hidratação Capilar" data-price="30" data-cashback="5">
+                                <div class="service-card-header">
+                                    <div class="service-icon">
+                                        <i class="fas fa-magic"></i>
+                                    </div>
+                                    <div class="service-check">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <h3>Hidratação Capilar</h3>
+                                <p>Tratamento para cabelos ressecados e danificados</p>
+                                <div class="service-price-tag">
+                                    <span class="price">R$ 30,00</span>
+                                    <span class="cashback">+5% cashback</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pacotes Especiais -->
+                    <div class="service-category">
+                        <h3><i class="fas fa-gift"></i> PACOTES ESPECIAIS</h3>
+                        <div class="service-options-grid">
+                            <div class="service-option-card featured" data-service="Corte + Barba" data-price="70" data-cashback="10">
+                                <div class="service-card-header">
+                                    <div class="service-icon">
+                                        <i class="fas fa-plus"></i>
+                                    </div>
+                                    <div class="service-check">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <h3>Corte + Barba</h3>
+                                <p>Combinação de corte de cabelo e barba completa</p>
+                                <div class="service-price-tag">
+                                    <span class="price">R$ 70,00</span>
+                                    <span class="cashback">+10% cashback</span>
+                                </div>
+                                <div class="service-card-badge premium">Recomendado</div>
+                            </div>
+                            
+                            <div class="service-option-card" data-service="Pacote Completo" data-price="90" data-cashback="10">
+                                <div class="service-card-header">
+                                    <div class="service-icon">
+                                        <i class="fas fa-plus-circle"></i>
+                                    </div>
+                                    <div class="service-check">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <h3>Pacote Completo</h3>
+                                <p>Corte, barba e hidratação capilar</p>
+                                <div class="service-price-tag">
+                                    <span class="price">R$ 90,00</span>
+                                    <span class="cashback">+10% cashback</span>
+                                </div>
+                            </div>
+                            
+                            <div class="service-option-card" data-service="Pacote Premium" data-price="120" data-cashback="15">
+                                <div class="service-card-header">
+                                    <div class="service-icon">
+                                        <i class="fas fa-star-of-david"></i>
+                                    </div>
+                                    <div class="service-check">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <h3>Pacote Premium</h3>
+                                <p>Corte, barba, hidratação e massagem</p>
+                                <div class="service-price-tag">
+                                    <span class="price">R$ 120,00</span>
+                                    <span class="cashback">+15% cashback</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <input type="hidden" id="selected-service" name="service" value="">
+                <input type="hidden" id="selected-service-price" name="service-price" value="">
+                <input type="hidden" id="selected-service-cashback" name="service-cashback" value="">
+                
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-next">Próximo <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- PASSO 2: BARBEIROS (com novo barbeiro) -->
+              <div class="form-step" id="step-2">
+                <h2>Escolha o Barbeiro</h2>
+                <p class="step-subtitle">Selecione o profissional preferido para seu atendimento</p>
+                
+                <div class="barber-options-grid">
+                    <div class="barber-option-card" data-barber="Zé">
+                        <div class="barber-image">
+                            <img src="jose.jpeg" alt="Zé">
+                            <div class="barber-overlay">
+                                <span>Selecionar</span>
+                            </div>
+                        </div>
+                        <h3>Zé</h3>
+                        <p>Especialista em Cortes Clássicos</p>
+                        <div class="barber-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+                        <div class="barber-status available">Disponível</div>
+                    </div>
+                    
+                    <div class="barber-option-card" data-barber="Dudu">
+                        <div class="barber-image">
+                            <img src="dudu.jpeg" alt="Dudu">
+                            <div class="barber-overlay">
+                                <span>Selecionar</span>
+                            </div>
+                        </div>
+                        <h3>Dudu</h3>
+                        <p>Especialista em Barba</p>
+                        <div class="barber-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                        <div class="barber-status available">Disponível</div>
+                    </div>
+                    
+                    <div class="barber-option-card" data-barber="Léo">
+                        <div class="barber-image">
+                            <img src="https://placehold.co/120x120/0a6fe2/ffffff?text=Léo" alt="Léo">
+                            <div class="barber-overlay">
+                                <span>Selecionar</span>
+                            </div>
+                        </div>
+                        <h3>Léo</h3>
+                        <p>Especialista em Tratamentos</p>
+                        <div class="barber-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.2</span>
+                        </div>
+                        <div class="barber-status available">Disponível</div>
+                    </div>
+
+                    <!-- NOVO BARBEIRO RAFAEL -->
+                    <div class="barber-option-card" data-barber="Polvilho">
+                        <div class="barber-image">
+                            <img src="luis.jpg" alt="Polvilho">
+                            <div class="barber-overlay">
+                                <span>Selecionar</span>
+                            </div>
+                        </div>
+                        <h3>Rafael</h3>
+                        <p>Especialista em Cortes Modernos</p>
+                        <div class="barber-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                        <div class="barber-status available">Disponível</div>
+                    </div>
+                </div>
+                
+                <input type="hidden" id="selected-barber" name="barber" value="">
+                
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-prev"><i class="fas fa-arrow-left"></i> Anterior</button>
+                    <button type="button" class="btn btn-next">Próximo <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="form-step" id="step-2">
+                <!-- Conteúdo mantido igual -->
+            </div>
+            
+            <!-- PASSO 3: DATA E HORA (SISTEMA INOVADOR) -->
+            <div class="form-step" id="step-3">
+                <h2>Selecione Data e Hora</h2>
+                <p class="step-subtitle">Escolha a data e horário que melhor se encaixam em sua agenda</p>
+                
+                <div class="datetime-selection-modern">
+                    <!-- Seleção Rápida de Data -->
+                    <div class="quick-date-selection glass-card">
+                        <h3>Datas Sugeridas</h3>
+                        <div class="quick-dates-grid">
+                            <div class="quick-date-option" data-days="0">
+                                <div class="quick-date-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <span class="quick-date-label">Hoje</span>
+                                <span class="quick-date-day" id="today-date"></span>
+                            </div>
+                            <div class="quick-date-option" data-days="1">
+                                <div class="quick-date-icon">
+                                    <i class="fas fa-sun"></i>
+                                </div>
+                                <span class="quick-date-label">Amanhã</span>
+                                <span class="quick-date-day" id="tomorrow-date"></span>
+                            </div>
+                            <div class="quick-date-option" data-days="2">
+                                <div class="quick-date-icon">
+                                    <i class="fas fa-calendar-plus"></i>
+                                </div>
+                                <span class="quick-date-label">Depois de amanhã</span>
+                                <span class="quick-date-day" id="day-after-date"></span>
+                            </div>
+                            <div class="quick-date-option" data-days="7">
+                                <div class="quick-date-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="quick-date-label">Próxima semana</span>
+                                <span class="quick-date-day" id="next-week-date"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calendário Futurista -->
+                    <div class="futuristic-calendar glass-card">
+                        <div class="calendar-header">
+                            <button class="nav-btn futuristic-btn" id="prev-month">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <h3 id="current-month">Junho 2024</h3>
+                            <button class="nav-btn futuristic-btn" id="next-month">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="calendar-weekdays">
+                            <span>DOM</span><span>SEG</span><span>TER</span><span>QUA</span>
+                            <span>QUI</span><span>SEX</span><span>SÁB</span>
+                        </div>
+                        <div class="calendar-days" id="calendar-days">
+                            <!-- Dias gerados via JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Seleção de Horário com Visualização em Tempo Real -->
+                    <div class="time-selection-futuristic glass-card">
+                        <h3>Horários Disponíveis <span id="selected-date-display"></span></h3>
+                        
+                        <div class="time-period-selection">
+                            <div class="time-period-tabs">
+                                <button class="period-tab active" data-period="manha">
+                                    <i class="fas fa-sun"></i>
+                                    Manhã
+                                </button>
+                                <button class="period-tab" data-period="tarde">
+                                    <i class="fas fa-cloud-sun"></i>
+                                    Tarde
+                                </button>
+                                <button class="period-tab" data-period="noite">
+                                    <i class="fas fa-moon"></i>
+                                    Noite
+                                </button>
+                            </div>
+                            
+                            <div class="time-slots-container">
+                                <div class="time-period-slots active" id="manha-slots">
+                                    <h4>Horários da Manhã (8h - 12h)</h4>
+                                    <div class="time-slots-grid">
+                                        <!-- Horários da manhã gerados via JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="time-period-slots" id="tarde-slots">
+                                    <h4>Horários da Tarde (13h - 18h)</h4>
+                                    <div class="time-slots-grid">
+                                        <!-- Horários da tarde gerados via JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="time-period-slots" id="noite-slots">
+                                    <h4>Horários da Noite (18h30 - 20h)</h4>
+                                    <div class="time-slots-grid">
+                                        <!-- Horários da noite gerados via JavaScript -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="selected-time-preview">
+                            <div class="preview-content">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span>Seu horário:</span>
+                                    <strong id="time-preview">--:--</strong>
+                                    <span class="preview-date" id="date-preview"></span>
+                                </div>
+                                <button type="button" class="futuristic-btn small" id="clear-time-btn">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <input type="hidden" id="selected-date" name="date" value="">
+                <input type="hidden" id="selected-time" name="time" value="">
+                
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-prev"><i class="fas fa-arrow-left"></i> Anterior</button>
+                    <button type="button" class="btn btn-next" id="next-to-confirm">Próximo <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- PASSO 4: CONFIRMAÇÃO -->
+            <div class="form-step" id="step-4">
+                <h2>Confirme seus Dados</h2>
+                <p class="step-subtitle">Revise suas informações e finalize o agendamento</p>
+                
+                <div class="confirmation-summary">
+                    <div class="summary-card glass-card">
+                        <h3>Resumo do Agendamento</h3>
+                        <div class="summary-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Serviço:</span>
+                                <span id="confirm-service" class="detail-value"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Barbeiro:</span>
+                                <span id="confirm-barber" class="detail-value"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Data:</span>
+                                <span id="confirm-date" class="detail-value"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Horário:</span>
+                                <span id="confirm-time" class="detail-value"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Valor:</span>
+                                <span id="confirm-price" class="detail-value">R$ 0,00</span>
+                            </div>
+                            <div class="detail-item highlight">
+                                <span class="detail-label">Cashback:</span>
+                                <span id="confirm-cashback" class="detail-value">R$ 0,00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="personal-info">
+                    <h3>Seus Dados</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="client-name">Nome Completo:</label>
+                            <input type="text" id="client-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-phone">Telefone:</label>
+                            <input type="tel" id="client-phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="client-email">E-mail:</label>
+                        <input type="email" id="client-email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-prev"><i class="fas fa-arrow-left"></i> Anterior</button>
+                    <button type="submit" class="btn btn-primary btn-confirm">
+                        <i class="fas fa-check-circle"></i> Confirmar Agendamento
+                    </button>
+                </div>
+            </div>
+        </form>
+        
+        <div id="booking-success" class="booking-success glass-card hidden">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Agendamento Confirmado!</h2>
+            <p>Seu horário foi reservado com sucesso. Detalhes do agendamento:</p>
+            
+            <div class="booking-details">
+                <div class="detail-item">
+                    <span class="detail-label">Código:</span>
+                    <span id="booking-code" class="detail-value">#ZB12345</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Serviço:</span>
+                    <span id="success-service" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Barbeiro:</span>
+                    <span id="success-barber" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Data:</span>
+                    <span id="success-date" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Horário:</span>
+                    <span id="success-time" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Valor:</span>
+                    <span id="success-price" class="detail-value"></span>
+                </div>
+                <div class="detail-item highlight">
+                    <span class="detail-label">Cashback Ganho:</span>
+                    <span id="success-cashback" class="detail-value"></span>
+                </div>
+            </div>
+            
+            <p>Um e-mail de confirmação foi enviado para <span id="success-email"></span>.</p>
+            
+            <div class="success-actions">
+                <a href="index.html" class="btn btn-primary">Voltar ao Início</a>
+                <button id="new-booking" class="btn btn-secondary">Novo Agendamento</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        // SISTEMA COMPLETO DE AGENDAMENTO
+        document.addEventListener('DOMContentLoaded', function() {
+            // Variáveis globais
+            let currentDate = new Date();
+            let selectedDate = null;
+            let selectedTime = null;
+            let selectedService = null;
+            let selectedServicePrice = null;
+            let selectedServiceCashback = null;
+            let selectedBarber = null;
+            
+            // Inicializar datas rápidas
+            function initQuickDates() {
+                const today = new Date();
+                const tomorrow = new Date(today);
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                const dayAfter = new Date(today);
+                dayAfter.setDate(dayAfter.getDate() + 2);
+                const nextWeek = new Date(today);
+                nextWeek.setDate(nextWeek.getDate() + 7);
+                
+                document.getElementById('today-date').textContent = formatDate(today);
+                document.getElementById('tomorrow-date').textContent = formatDate(tomorrow);
+                document.getElementById('day-after-date').textContent = formatDate(dayAfter);
+                document.getElementById('next-week-date').textContent = formatDate(nextWeek);
+                
+                // Event listeners para datas rápidas
+                document.querySelectorAll('.quick-date-option').forEach(option => {
+                    option.addEventListener('click', function() {
+                        const daysToAdd = parseInt(this.getAttribute('data-days'));
+                        selectQuickDate(daysToAdd);
+                    });
+                });
+            }
+            
+            // Formatar data (DD/MM)
+            function formatDate(date) {
+                return date.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+            }
+            
+            // Selecionar data rápida
+            function selectQuickDate(daysToAdd) {
+                const date = new Date();
+                date.setDate(date.getDate() + daysToAdd);
+                selectDate(date);
+                
+                // Destacar opção selecionada
+                document.querySelectorAll('.quick-date-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                event.currentTarget.classList.add('selected');
+            }
+            
+            // Inicializar sistema de data/hora
+            function initDateTimeSystem() {
+                initQuickDates();
+                initCalendar();
+                setupEventListeners();
+            }
+            
+            // Inicializar calendário
+            function initCalendar() {
+                updateCalendar();
+                setupCalendarNavigation();
+            }
+            
+            // Atualizar calendário
+            function updateCalendar() {
+                const monthYearElement = document.getElementById('current-month');
+                const calendarDaysElement = document.getElementById('calendar-days');
+                
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth();
+                
+                // Nome do mês e ano
+                const monthNames = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 
+                                  'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+                monthYearElement.textContent = `${monthNames[month]} ${year}`;
+                
+                // Limpar dias anteriores
+                calendarDaysElement.innerHTML = '';
+                
+                // Primeiro e último dia do mês
+                const firstDay = new Date(year, month, 1);
+                const lastDay = new Date(year, month + 1, 0);
+                const firstDayIndex = firstDay.getDay();
+                
+                // Dias do mês anterior
+                const prevMonthLastDay = new Date(year, month, 0).getDate();
+                
+                // Hoje
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                
+                // Gerar dias
+                let daysHTML = '';
+                
+                // Dias do mês anterior
+                for (let i = firstDayIndex; i > 0; i--) {
+                    const day = prevMonthLastDay - i + 1;
+                    daysHTML += `<div class="calendar-day other-month">${day}</div>`;
+                }
+                
+                // Dias do mês atual
+                for (let i = 1; i <= lastDay.getDate(); i++) {
+                    const date = new Date(year, month, i);
+                    const isToday = date.toDateString() === today.toDateString();
+                    const isSelected = selectedDate && date.toDateString() === selectedDate.toDateString();
+                    const isPast = date < today;
+                    
+                    let dayClass = 'calendar-day';
+                    if (isToday) dayClass += ' today';
+                    if (isSelected) dayClass += ' selected';
+                    if (isPast) dayClass += ' past';
+                    
+                    daysHTML += `<div class="${dayClass}" data-date="${date.toISOString()}">${i}</div>`;
+                }
+                
+                // Dias do próximo mês
+                const totalCells = 42; // 6 semanas
+                const remainingCells = totalCells - (firstDayIndex + lastDay.getDate());
+                for (let i = 1; i <= remainingCells; i++) {
+                    daysHTML += `<div class="calendar-day other-month">${i}</div>`;
+                }
+                
+                calendarDaysElement.innerHTML = daysHTML;
+                
+                // Event listeners para dias clicáveis
+                document.querySelectorAll('.calendar-day:not(.past):not(.other-month)').forEach(day => {
+                    day.addEventListener('click', function() {
+                        const date = new Date(this.getAttribute('data-date'));
+                        selectDate(date);
+                    });
+                });
+            }
+            
+            // Navegação do calendário
+            function setupCalendarNavigation() {
+                document.getElementById('prev-month').addEventListener('click', function() {
+                    currentDate.setMonth(currentDate.getMonth() - 1);
+                    updateCalendar();
+                });
+                
+                document.getElementById('next-month').addEventListener('click', function() {
+                    currentDate.setMonth(currentDate.getMonth() + 1);
+                    updateCalendar();
+                });
+            }
+            
+            // Selecionar data
+            function selectDate(date) {
+                selectedDate = new Date(date);
+                selectedDate.setHours(0, 0, 0, 0);
+                
+                // Atualizar UI
+                updateCalendar();
+                updateSelectedDateDisplay();
+                generateTimeSlots();
+                
+                // Atualizar campo hidden
+                document.getElementById('selected-date').value = selectedDate.toISOString().split('T')[0];
+                
+                // Atualizar resumo
+                updateConfirmationDetails();
+            }
+            
+            // Atualizar display da data selecionada
+            function updateSelectedDateDisplay() {
+                if (!selectedDate) return;
+                
+                const options = { weekday: 'long', day: 'numeric', month: 'long' };
+                const dateStr = selectedDate.toLocaleDateString('pt-BR', options);
+                document.getElementById('selected-date-display').textContent = dateStr;
+            }
+            
+            // Gerar horários disponíveis
+            function generateTimeSlots() {
+                if (!selectedDate) return;
+                
+                // Limpar slots anteriores
+                document.querySelectorAll('.time-slots-grid').forEach(grid => {
+                    grid.innerHTML = '';
+                });
+                
+                const today = new Date();
+                const isToday = selectedDate.toDateString() === today.toDateString();
+                
+                // Horários da manhã (8h-12h)
+                for (let hour = 8; hour < 12; hour++) {
+                    for (let minute = 0; minute < 60; minute += 30) {
+                        createTimeSlot(hour, minute, 'manha', isToday, today);
+                    }
+                }
+                
+                // Horários da tarde (13h-18h) - MAIS HORÁRIOS À TARDE
+                for (let hour = 13; hour < 18; hour++) {
+                    for (let minute = 0; minute < 60; minute += 30) {
+                        createTimeSlot(hour, minute, 'tarde', isToday, today);
+                    }
+                }
+                
+                // Horários da noite (18h30-20h)
+                for (let hour = 18; hour < 20; hour++) {
+                    for (let minute = hour === 18 ? 30 : 0; minute < 60; minute += 30) {
+                        if (hour === 19 && minute === 30) break; // Último horário 19:30
+                        createTimeSlot(hour, minute, 'noite', isToday, today);
+                    }
+                }
+            }
+            
+            // Criar slot de horário
+            function createTimeSlot(hour, minute, period, isToday, today) {
+                const timeString = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+                const timeContainer = document.getElementById(`${period}-slots`).querySelector('.time-slots-grid');
+                
+                // Verificar se horário já passou (para hoje)
+                const isPast = isToday && (
+                    hour < today.getHours() || 
+                    (hour === today.getHours() && minute < today.getMinutes())
+                );
+                
+                // Simular disponibilidade (80% disponível)
+                const isAvailable = !isPast && Math.random() > 0.2;
+                
+                const timeSlot = document.createElement('div');
+                timeSlot.className = `time-slot-futuristic ${isAvailable ? 'available' : 'unavailable'}`;
+                timeSlot.innerHTML = timeString;
+                
+                if (isAvailable) {
+                    timeSlot.addEventListener('click', function() {
+                        selectTime(timeString);
+                    });
+                    
+                    // Adicionar efeito de hover
+                    timeSlot.addEventListener('mouseenter', function() {
+                        if (!this.classList.contains('selected')) {
+                            this.style.transform = 'translateY(-2px)';
+                            this.style.boxShadow = '0 5px 15px rgba(10, 111, 226, 0.3)';
+                        }
+                    });
+                    
+                    timeSlot.addEventListener('mouseleave', function() {
+                        if (!this.classList.contains('selected')) {
+                            this.style.transform = 'translateY(0)';
+                            this.style.boxShadow = 'none';
+                        }
+                    });
+                }
+                
+                timeContainer.appendChild(timeSlot);
+            }
+            
+            // Selecionar horário
+            function selectTime(time) {
+                selectedTime = time;
+                
+                // Atualizar UI
+                document.querySelectorAll('.time-slot-futuristic.available').forEach(slot => {
+                    slot.classList.remove('selected');
+                });
+                
+                // Encontrar e destacar slot selecionado
+                const allSlots = document.querySelectorAll('.time-slot-futuristic');
+                allSlots.forEach(slot => {
+                    if (slot.textContent === time) {
+                        slot.classList.add('selected');
+                        slot.style.transform = 'scale(1.1)';
+                        slot.style.boxShadow = '0 0 20px rgba(10, 111, 226, 0.5)';
+                    }
+                });
+                
+                // Atualizar preview
+                document.getElementById('time-preview').textContent = time;
+                document.getElementById('selected-time').value = time;
+                
+                // Atualizar data no preview
+                if (selectedDate) {
+                    const options = { day: 'numeric', month: 'long' };
+                    const dateStr = selectedDate.toLocaleDateString('pt-BR', options);
+                    document.getElementById('date-preview').textContent = dateStr;
+                }
+                
+                // Mostrar preview
+                document.querySelector('.selected-time-preview').classList.add('active');
+                
+                // Atualizar resumo
+                updateConfirmationDetails();
+            }
+            
+            // Configurar event listeners
+            function setupEventListeners() {
+                // Alternar entre períodos do dia
+                document.querySelectorAll('.period-tab').forEach(tab => {
+                    tab.addEventListener('click', function() {
+                        const period = this.getAttribute('data-period');
+                        
+                        // Atualizar botões
+                        document.querySelectorAll('.period-tab').forEach(t => {
+                            t.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                        
+                        // Mostrar horários do período selecionado
+                        document.querySelectorAll('.time-period-slots').forEach(slot => {
+                            slot.classList.remove('active');
+                        });
+                        document.getElementById(`${period}-slots`).classList.add('active');
+                    });
+                });
+                
+                // Limpar seleção de horário
+                document.getElementById('clear-time-btn').addEventListener('click', function() {
+                    selectedTime = null;
+                    document.querySelectorAll('.time-slot-futuristic.selected').forEach(slot => {
+                        slot.classList.remove('selected');
+                        slot.style.transform = 'translateY(0)';
+                        slot.style.boxShadow = 'none';
+                    });
+                    document.getElementById('selected-time').value = '';
+                    document.querySelector('.selected-time-preview').classList.remove('active');
+                    
+                    // Atualizar resumo
+                    updateConfirmationDetails();
+                });
+                
+                // Validação antes de avançar
+                document.getElementById('next-to-confirm').addEventListener('click', function() {
+                    if (!selectedDate || !selectedTime) {
+                        showNotification('Por favor, selecione uma data e horário', 'error');
+                        return;
+                    }
+                    goToNextStep();
+                });
+                
+                // Seleção de serviços
+                document.querySelectorAll('.service-option-card').forEach(card => {
+                    card.addEventListener('click', function() {
+                        selectedService = this.getAttribute('data-service');
+                        selectedServicePrice = this.getAttribute('data-price');
+                        selectedServiceCashback = this.getAttribute('data-cashback');
+                        
+                        // Destacar serviço selecionado
+                        document.querySelectorAll('.service-option-card').forEach(c => {
+                            c.classList.remove('selected');
+                        });
+                        this.classList.add('selected');
+                        
+                        // Atualizar campos hidden
+                        document.getElementById('selected-service').value = selectedService;
+                        document.getElementById('selected-service-price').value = selectedServicePrice;
+                        document.getElementById('selected-service-cashback').value = selectedServiceCashback;
+                        
+                        // Atualizar resumo
+                        updateConfirmationDetails();
+                    });
+                });
+                
+                // Seleção de barbeiros
+                document.querySelectorAll('.barber-option-card').forEach(card => {
+                    card.addEventListener('click', function() {
+                        selectedBarber = this.getAttribute('data-barber');
+                        
+                        // Destacar barbeiro selecionado
+                        document.querySelectorAll('.barber-option-card').forEach(c => {
+                            c.classList.remove('selected');
+                        });
+                        this.classList.add('selected');
+                        
+                        // Atualizar campo hidden
+                        document.getElementById('selected-barber').value = selectedBarber;
+                        
+                        // Atualizar resumo
+                        updateConfirmationDetails();
+                    });
+                });
+            }
+            
+            // Atualizar detalhes de confirmação
+            function updateConfirmationDetails() {
+                if (selectedService) {
+                    document.getElementById('confirm-service').textContent = selectedService;
+                }
+                
+                if (selectedBarber) {
+                    document.getElementById('confirm-barber').textContent = selectedBarber;
+                }
+                
+                if (selectedDate) {
+                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                    const dateStr = selectedDate.toLocaleDateString('pt-BR', options);
+                    document.getElementById('confirm-date').textContent = dateStr;
+                }
+                
+                if (selectedTime) {
+                    document.getElementById('confirm-time').textContent = selectedTime;
+                }
+                
+                if (selectedServicePrice) {
+                    const price = parseFloat(selectedServicePrice);
+                    document.getElementById('confirm-price').textContent = `R$ ${price.toFixed(2).replace('.', ',')}`;
+                    
+                    // Calcular cashback
+                    const cashbackPercent = isFirstBooking() ? 15 : parseInt(selectedServiceCashback);
+                    const cashbackAmount = (price * cashbackPercent / 100).toFixed(2);
+                    document.getElementById('confirm-cashback').textContent = `R$ ${cashbackAmount.replace('.', ',')}`;
+                }
+            }
+            
+            // Função auxiliar para mostrar notificações
+            function showNotification(message, type) {
+                // Implementação simples de notificação
+                alert(`${type === 'error' ? '❌ ' : '✅ '} ${message}`);
+            }
+            
+            // Verificar se é o primeiro agendamento
+            function isFirstBooking() {
+                return !localStorage.getItem('hasBookedBefore');
+            }
+            
+            // Navegação entre passos
+            function goToNextStep() {
+                const currentStep = document.querySelector('.form-step.active');
+                const currentStepIndex = Array.from(document.querySelectorAll('.form-step')).indexOf(currentStep);
+                
+                if (currentStepIndex < 3) {
+                    currentStep.classList.remove('active');
+                    document.querySelectorAll('.form-step')[currentStepIndex + 1].classList.add('active');
+                    
+                    // Atualizar indicador de passos
+                    document.querySelectorAll('.step').forEach((step, index) => {
+                        if (index === currentStepIndex + 1) {
+                            step.classList.add('active');
+                        } else if (index < currentStepIndex + 1) {
+                            step.classList.add('completed');
+                        } else {
+                            step.classList.remove('active', 'completed');
+                        }
+                    });
+                }
+            }
+            
+            // Inicializar sistema
+            initDateTimeSystem();
+            
+            // Configurar navegação entre passos
+            document.querySelectorAll('.btn-next').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const currentStep = document.querySelector('.form-step.active');
+                    const currentStepId = currentStep.id;
+                    
+                    // Validações específicas para cada passo
+                    if (currentStepId === 'step-1' && !selectedService) {
+                        showNotification('Por favor, selecione um serviço', 'error');
+                        return;
+                    }
+                    
+                    if (currentStepId === 'step-2' && !selectedBarber) {
+                        showNotification('Por favor, selecione um barbeiro', 'error');
+                        return;
+                    }
+                    
+                    goToNextStep();
+                });
+            });
+            
+            document.querySelectorAll('.btn-prev').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const currentStep = document.querySelector('.form-step.active');
+                    const currentStepIndex = Array.from(document.querySelectorAll('.form-step')).indexOf(currentStep);
+                    
+                    if (currentStepIndex > 0) {
+                        currentStep.classList.remove('active');
+                        document.querySelectorAll('.form-step')[currentStepIndex - 1].classList.add('active');
+                        
+                        // Atualizar indicador de passos
+                        document.querySelectorAll('.step').forEach((step, index) => {
+                            if (index === currentStepIndex - 1) {
+                                step.classList.add('active');
+                                step.classList.remove('completed');
+                            } else if (index < currentStepIndex - 1) {
+                                step.classList.add('completed');
+                            } else {
+                                step.classList.remove('active', 'completed');
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // Envio do formulário
+            document.getElementById('booking-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simular sucesso no agendamento
+                document.getElementById('booking-form').classList.add('hidden');
+                document.getElementById('booking-success').classList.remove('hidden');
+                
+                // Preencher detalhes de sucesso
+                document.getElementById('success-service').textContent = selectedService;
+                document.getElementById('success-barber').textContent = selectedBarber;
+                
+                if (selectedDate) {
+                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                    const dateStr = selectedDate.toLocaleDateString('pt-BR', options);
+                    document.getElementById('success-date').textContent = dateStr;
+                }
+                
+                document.getElementById('success-time').textContent = selectedTime;
+                
+                if (selectedServicePrice) {
+                    const price = parseFloat(selectedServicePrice);
+                    document.getElementById('success-price').textContent = `R$ ${price.toFixed(2).replace('.', ',')}`;
+                    
+                    // Calcular cashback
+                    const cashbackPercent = isFirstBooking() ? 15 : parseInt(selectedServiceCashback);
+                    const cashbackAmount = (price * cashbackPercent / 100).toFixed(2);
+                    document.getElementById('success-cashback').textContent = `R$ ${cashbackAmount.replace('.', ',')}`;
+                }
+                
+                document.getElementById('success-email').textContent = document.getElementById('client-email').value;
+                
+                // Gerar código de agendamento
+                const bookingCode = `#ZB${Math.floor(10000 + Math.random() * 90000)}`;
+                document.getElementById('booking-code').textContent = bookingCode;
+                
+                // Marcar que o usuário já fez um agendamento
+                localStorage.setItem('hasBookedBefore', 'true');
+            });
+            
+            // Novo agendamento
+            document.getElementById('new-booking').addEventListener('click', function() {
+                location.reload();
+            });
+        });
+    </script>
+</body>
+</html>

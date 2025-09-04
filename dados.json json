@@ -1,0 +1,211 @@
+{
+  "servicos": [
+    {
+      "id": 1,
+      "nome": "Corte Clássico",
+      "categoria": "Corte de Cabelo",
+      "descricao": "Corte tradicional com tesoura e máquina, finalizado com styling profissional.",
+      "preco": 40.00,
+      "duracao": 30,
+      "cashback": 5,
+      "destaque": false
+    },
+    {
+      "id": 2,
+      "nome": "Corte Degradê",
+      "categoria": "Corte de Cabelo",
+      "descricao": "Corte moderno com transição perfeita de comprimento, o mais pedido da casa.",
+      "preco": 50.00,
+      "duracao": 45,
+      "cashback": 5,
+      "destaque": true
+    },
+    {
+      "id": 3,
+      "nome": "Corte Social",
+      "categoria": "Corte de Cabelo",
+      "descricao": "Corte sofisticado para eventos especiais, com design personalizado.",
+      "preco": 60.00,
+      "duracao": 60,
+      "cashback": 7,
+      "destaque": false
+    },
+    {
+      "id": 4,
+      "nome": "Barba Completa",
+      "categoria": "Barba",
+      "descricao": "Aparar, modelar e finalizar com toalha quente e produtos premium.",
+      "preco": 35.00,
+      "duracao": 30,
+      "cashback": 5,
+      "destaque": false
+    },
+    {
+      "id": 5,
+      "nome": "Barba Desenhada",
+      "categoria": "Barba",
+      "descricao": "Design personalizado para valorizar o formato do seu rosto.",
+      "preco": 45.00,
+      "duracao": 45,
+      "cashback": 7,
+      "destaque": true
+    },
+    {
+      "id": 6,
+      "nome": "Hidratação de Barba",
+      "categoria": "Barba",
+      "descricao": "Tratamento especial para barba mais macia, saudável e cheirosa.",
+      "preco": 25.00,
+      "duracao": 20,
+      "cashback": 5,
+      "destaque": false
+    },
+    {
+      "id": 7,
+      "nome": "Limpeza de Pele",
+      "categoria": "Tratamentos Premium",
+      "descricao": "Limpeza profunda facial para remover cravos e impurezas.",
+      "preco": 50.00,
+      "duracao": 45,
+      "cashback": 7,
+      "destaque": false
+    },
+    {
+      "id": 8,
+      "nome": "Massagem Relaxante",
+      "categoria": "Tratamentos Premium",
+      "descricao": "Massagem facial e capilar para aliviar tensões e estresse.",
+      "preco": 40.00,
+      "duracao": 30,
+      "cashback": 5,
+      "destaque": false
+    },
+    {
+      "id": 9,
+      "nome": "Hidratação Capilar",
+      "categoria": "Tratamentos Premium",
+      "descricao": "Tratamento reconstrutor para cabelos danificados danificados e ressecados.",
+      "preco": 30.00,
+      "duracao": 25,
+      "cashback": 5,
+      "destaque": false
+    },
+    {
+      "id": 10,
+      "nome": "Corte + Barba",
+      "categoria": "Pacotes Especiais",
+      "descricao": "Combinação perfeita: corte de cabelo e barba completa.",
+      "preco": 70.00,
+      "duracao": 75,
+      "cashback": 10,
+      "destaque": true
+    },
+    {
+      "id": 11,
+      "nome": "Pacote Completo",
+      "categoria": "Pacotes Especiais",
+      "descricao": "Corte, barba e hidratação capilar. Experiência completa.",
+      "preco": 90.00,
+      "duracao": 90,
+      "cashback": 10,
+      "destaque": false
+    },
+    {
+      "id": 12,
+      "nome": "Pacote Premium",
+      "categoria": "Pacotes Especiais",
+      "descricao": "Tudo que há de melhor: corte, barba, hidratação e massagem.",
+      "preco": 120.00,
+      "duracao": 120,
+      "cashback": 15,
+      "destaque": true
+    }
+  ],
+  "barbeiros": [
+    {
+      "id": 1,
+      "nome": "José Silva",
+      "apelido": "Zé",
+      "especialidade": "Cortes Clássicos e Degradê",
+      "experiencia": "8 anos",
+      "avaliacao": 4.8,
+      "foto": "jose.jpg",
+      "destaque": true
+    },
+    {
+      "id": 2,
+      "nome": "Eduardo Santos",
+      "apelido": "Dudu",
+      "especialidade": "Barba e Estilos Modernos",
+      "experiencia": "6 anos",
+      "avaliacao": 4.9,
+      "foto": "dudu.jpg",
+      "destaque": true
+    },
+    {
+      "id": 3,
+      "nome": "Leonardo Oliveira",
+      "apelido": "Léo",
+      "especialidade": "Tratamentos Premium",
+      "experiencia": "5 anos",
+      "avaliacao": 4.2,
+      "foto": "leo.jpg",
+      "destaque": false
+    },
+    {
+      "id": 4,
+      "nome": "Luis Eduardo",
+      "apelido": "Polvilho",
+      "especialidade": "Cortes Modernos e Colorização",
+      "experiencia": "7 anos",
+      "avaliacao": 4.9,
+      "foto": "luis.jpg",
+      "destaque": true
+    }
+  ],
+  "planos": [
+    {
+      "id": 1,
+      "nome": "Plano Básico",
+      "preco": 69.00,
+      "periodicidade": "mensal",
+      "beneficios": [
+        "2 Cortes mensais",
+        "Aparar barba (1x)",
+        "5% de cashback",
+        "Agendamento online"
+      ],
+      "destaque": false
+    },
+    {
+      "id": 2,
+      "nome": "Plano Premium",
+      "preco": 119.00,
+      "periodicidade": "mensal",
+      "beneficios": [
+        "4 Cortes mensais",
+        "Barba completa (2x)",
+        "10% de cashback",
+        "Limpeza de pele (1x)",
+        "Horário preferencial",
+        "Agendamento prioritário"
+      ],
+      "destaque": true
+    },
+    {
+      "id": 3,
+      "nome": "Plano VIP",
+      "preco": 199.00,
+      "periodicidade": "mensal",
+      "beneficios": [
+        "Cortes ilimitados",
+        "Barba ilimitada",
+        "15% de cashback",
+        "Todos os serviços premium",
+        "Agendamento prioritário 24/7",
+        "Desconto em produtos"
+      ],
+      "destaque": false
+    }
+  ]
+}
