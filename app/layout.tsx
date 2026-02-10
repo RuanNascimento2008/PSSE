@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "BARBEARIA ZE DA REGUA | Estilo Premium",
+  title: "MAGNATAS BARBER SHOP | Estilo Premium",
   description:
     "Tecnologia de ponta e tradicao barber se encontram para criar a experiencia definitiva em cuidados masculinos.",
 }
